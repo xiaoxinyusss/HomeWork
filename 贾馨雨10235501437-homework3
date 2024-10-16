@@ -318,8 +318,7 @@
     "\n",
     "# CSV 文件路径\n",
     "file_path = r\"C:\\Users\\贾622\\Downloads\\stuGrade (1).csv\"\n",
-    "output_file = r\"C:\\Users\\贾622\\Desktop\\my.txt\"  # 确保输出文件路径正确\n",
-    "\n",
+    "output_file = r\"C:\\Users\\贾622\\Desktop\\my.txt\"  
     "# 初始化变量\n",
     "chinese_total = math_total = english_total = student_count = 0\n",
     "\n",
@@ -333,14 +332,13 @@
     "            math_total += int(row['math'].strip())\n",
     "            english_total += int(row['english'].strip())\n",
     "            student_count += 1\n",
-    "\n",
     "    # 计算平均分\n",
     "    if student_count > 0:  # 确保有学生数据\n",
     "        chinese_avg = round(chinese_total / student_count, 2)\n",
     "        math_avg = round(math_total / student_count, 2)\n",
     "        english_avg = round(english_total / student_count, 2)\n",
     "    else: \n",
-    "        raise ValueError(\"没有学生数据，无法计算平均分。\")  # 如果没有学生数据则抛出错误\n",
+    "        raise ValueError(\"没有学生数据，无法计算平均分。\")  
     "\n",
     "    # 获取当前时间\n",
     "    current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')\n",
@@ -348,12 +346,12 @@
     "    future_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')\n",
     "\n",
     "    # 写入 my.txt 文件\n",
-    "    print(f\"准备写入 {output_file} 文件...\")  # 调试信息\n",
+    "    print(f\"准备写入 {output_file} 文件...\")  、
     "    with open(output_file, mode='w', encoding='utf-8') as file:\n",
-    "        file.write(\"10235501437, jxy\\n\")  # 第1行：你的学号和姓名\n",
-    "        file.write(f\"{chinese_avg}, {math_avg}, {english_avg}\\n\")  # 第2行：3门课程的平均成绩\n",
-    "        file.write(f\"{current_time}\\n\")  # 第3行：系统当前时间\n",
-    "        file.write(f\"{future_time}\\n\")  # 第4行：两秒后的系统当前时间\n",
+    "        file.write(\"10235501437, 贾馨雨\n\")  
+    "        file.write(f\"{chinese_avg}, {math_avg}, {english_avg}\\n\") 
+    "        file.write(f\"{current_time}\\n\")  
+    "        file.write(f\"{future_time}\\n\") 
     "\n",
     "    print(f\"数据已成功写入 {output_file} 文件。\")\n",
     "except FileNotFoundError:\n",
